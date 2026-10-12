@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101114" />
+  <title>Dice — Telegram Mini App</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-mark">D</div>
+      <div>
+        <div class="brand">DICE CLUB</div>
+        <div class="subbrand">MINI GAME</div>
+      </div>
+      <div class="avatar" id="avatar">?</div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow"><span class="live-dot"></span> DICE ARENA</div>
+      <h1>Испытай<br /><span>удачу.</span></h1>
+      <p class="intro">Один бросок. Шесть возможных результатов.</p>
+    </section>
+
+    <section class="game-card">
+      <div class="card-head">
+        <span>ВАШ БРОСОК</span>
+        <span class="round-tag">DEMO MODE</span>
+      </div>
+      <div class="dice-stage">
+        <div class="glow"></div>
+        <button class="die" id="die" aria-label="Бросить кубик" title="Бросить кубик">
+          <span class="pip p1"></span><span class="pip p2"></span><span class="pip p3"></span>
+          <span class="pip p4"></span><span class="pip p5"></span><span class="pip p6"></span>
+          <span class="pip p7"></span><span class="pip p8"></span><span class="pip p9"></span>
+        </button>
+      </div>
+      <div class="result" id="result">Готов к броску?</div>
+      <div class="result-hint" id="hint">Нажми на кубик или кнопку ниже</div>
+      <button class="roll-button" id="rollButton"><span>Бросить кубик</span><span class="arrow">↗</span></button>
+      <div class="cost-note">В целевой версии планируемая цена попытки: <b>$3</b></div>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <div class="stat-label">ПОСЛЕДНИЙ РЕЗУЛЬТАТ</div>
+        <div class="stat-value" id="lastResult">—</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">ВОЗМОЖНЫЕ ЧИСЛА</div>
+        <div class="stat-value">1 <i>—</i> 6</div>
+      </div>
+    </section>
+
+    <div class="notice">
+      <span class="notice-icon">ⓘ</span>
+      <p><b>Демонстрационный прототип.</b> Броски бесплатные, реальные платежи и денежные выигрыши не подключены. Перед запуском платной игры нужно проверить законодательство и правила Telegram для целевых стран.</p>
+    </div>
+    <footer>BUILT FOR TELEGRAM <span>•</span> PROTOTYPE 0.1</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
